@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<title>Register to Maplay</title>
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.php" class="logo">maplay</a>
+				<nav class="right">
+					<a href="acc-index.php" class="button alt">Log in</a>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="mp-points.php">Add locations</a></li>
+					<li><a href="mp-visual.php">Visualize</a></li>
+					<li><a href="mp-read.php">Edit</a></li>
+					<li><a href="acc-profile.php">Profile</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="acc-index.php" class="button fit">Log in</a></li>
+				</ul>
+			</nav>
+		<div class="inner">
+			<div class="register">
+				<h1>Register to Maplay </h1>
+				<form action="phplogin/register.php" method="post" autocomplete="off">
+					<input type="text" name="username" placeholder="Username" id="username" style="margin-bottom: 30px;" required>
+					<input type="password" name="password" placeholder="Password (5-20 characters)" id="password"  style="margin-bottom: 30px;" required>
+					<input type="password" name="confirm_password" placeholder="Password again" id="confirm_password" style="margin-bottom: 30px;" required>
+					<span id='message'></span>
+							<script>
+									$('#password, #confirm_password').on('keyup', function () {
+									  if ($('#password').val() == $('#confirm_password').val()) {
+									    $('#message').html('Correct').css('color', 'green');
+									  } else 
+									    $('#message').html('Passwords do not match').css('color', 'red');
+									});
+							</script>
+					<input type="email" name="email" placeholder="Email" id="email" style="margin-bottom: 30px;" required>
+					<input type="submit" value="Register">
+				</form>
+			</div>
+		</div>
+
+		
+				<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Problem? Let me know.</h2>
+					<ul class="actions">
+						<li><span class="icon fa-envelope"></span> <a href="mailto:dominik.vit01@upol.cz?subject=Maplay_issue">dominik.vit01@upol.cz</a></li>
+						<li><span class="icon fa-map-marker"></span> Olomouc, Czechia</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; 2020 | Dominik Vít | <a href="http://www.geoinformatics.upol.cz/">Dept. of Geinformatics of Palacky university.</a> <br>
+					This app was made as a bachelor thesis project.
+					 Design made with <a href="https://templated.co">TEMPLATED</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
